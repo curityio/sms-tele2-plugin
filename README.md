@@ -14,3 +14,6 @@ Name            |   Default  | Description
 `From Number`   |            | The number that the message should be sent from. Can be a number or a name. Alphanumeric, 1-11 characters. 
 `Send Flash SMS`|   false    | When enabled, the service will send flash sms, which is not stored on the device.
 
+## Build plugin
+
+`./gradlew dist`
