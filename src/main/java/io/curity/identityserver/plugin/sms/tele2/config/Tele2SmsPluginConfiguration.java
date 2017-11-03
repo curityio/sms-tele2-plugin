@@ -23,7 +23,6 @@ import se.curity.identityserver.sdk.config.annotation.Description;
 import se.curity.identityserver.sdk.config.annotation.PatternConstraint;
 import se.curity.identityserver.sdk.config.annotation.SizeConstraint;
 import se.curity.identityserver.sdk.service.ExceptionFactory;
-import se.curity.identityserver.sdk.service.Json;
 import se.curity.identityserver.sdk.service.WebServiceClient;
 
 
@@ -40,8 +39,6 @@ public interface Tele2SmsPluginConfiguration extends Configuration
     String getMessageTemplate();
 
     ExceptionFactory getExceptionFactory();
-
-    Json getJson();
 
     WebServiceClient getWebServiceClient();
 
