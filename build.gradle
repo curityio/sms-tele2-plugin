@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'io.curity.identityserver.plugin'
+version = '2.2.2'
+
+description = """Tele2 Sms Provider"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    maven {
+        url "https://nexus.curity.se/nexus/content/repositories/customer-release-repo/"
+        credentials {
+            username "${mavenUser}"
+            password "${mavenPassword}"
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'se.curity.identityserver', name: 'identityserver.sdk', version: version
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.22'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '1.10.19'
+}
+
+task dist(type: Copy, dependsOn: jar) {
+    from configurations.runtime
+    from jar
+    exclude "identityserver.sdk*"
+    into "dist"
+}
