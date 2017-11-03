@@ -15,5 +15,7 @@ Name            |   Default  | Description
 `Send Flash SMS`|   false    | When enabled, the service will send flash sms, which is not stored on the device.
 
 ## Build plugin
+First, collect credentials to the Curity Nexus, to be able to fetch the SDK. Create a file called `gradle.properties` in the root of the repository, and put the credentials there.
 
+Then, build the plugin by:
 `./gradlew dist`
