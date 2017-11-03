@@ -1,11 +1,9 @@
 package io.curity.identityserver.plugin.sms.tele2;
 
-import io.curity.identityserver.plugin.sms.tele2.config.Tele2SmsPluginConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,8 +26,6 @@ public class ExtractLinkTest
     @Test
     public void parseMessage() throws Exception
     {
-
-        Tele2SmsSender sender = new Tele2SmsSender(Mockito.mock(Tele2SmsPluginConfiguration.class));
         Assert.assertThat(expected, is(equalTo(Tele2SmsUtil.extractOtpOrLink(testString))));
     }
 
