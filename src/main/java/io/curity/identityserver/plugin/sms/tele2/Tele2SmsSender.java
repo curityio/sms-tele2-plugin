@@ -34,7 +34,7 @@ import java.util.Map;
 
 public class Tele2SmsSender implements SmsSender
 {
-    private static Logger _logger = LoggerFactory.getLogger(Tele2SmsSender.class);
+    private static final Logger _logger = LoggerFactory.getLogger(Tele2SmsSender.class);
     private final ExceptionFactory _exceptionFactory;
     private final WebServiceClient _webServiceClient;
     private final Tele2SmsPluginConfiguration _configuration;
