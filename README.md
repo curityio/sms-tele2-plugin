@@ -1,7 +1,7 @@
 # Tele2 SMS Plugin #
 
-[![Quality](https://curity.io/assets/images/badges/sms-tele2-plugin-quality.svg)](https://curity.io/resources/code-examples/status/)
-[![Availability](https://curity.io/assets/images/badges/sms-tele2-plugin-availability.svg)](https://curity.io/resources/code-examples/status/)
+[![Quality](https://img.shields.io/badge/quality-test-yellow)](https://curity.io/resources/code-examples/status/)
+[![Availability](https://img.shields.io/badge/availability-source-blue)](https://curity.io/resources/code-examples/status/)
 
 This plugin enables the possibility to send OTP text messages through the Tele2 service.
 
