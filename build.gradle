@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group = 'io.curity.identityserver.plugin'
-version = '2.2.2'
+version = '5.4.0'
 
 description = """Tele2 Sms Provider"""
 
@@ -13,13 +13,6 @@ tasks.withType(JavaCompile) {
 }
 
 repositories {
-    maven {
-        url "https://nexus.curity.se/nexus/content/repositories/customer-release-repo/"
-        credentials {
-            username "${mavenUser}"
-            password "${mavenPassword}"
-        }
-    }
     mavenCentral()
 }
 
